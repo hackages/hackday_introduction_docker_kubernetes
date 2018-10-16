@@ -7,7 +7,8 @@ In this exercice, we would like to create a container, see it running and then k
 
 For this, you'll need to use the following command
 
-``` docker pull .. 
+```
+docker pull .. 
 docker run ..
 docker stop .. 
 docker pause ..
