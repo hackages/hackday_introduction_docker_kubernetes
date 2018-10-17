@@ -30,7 +30,7 @@ Tips, you can create a dockerfile per container.
 
 While running the application should be like this :
 
-![node] (./images/node.PNG)
+![node] (/images/node.PNG)
 
 ### 3) Building a python/flask application
 
@@ -44,4 +44,4 @@ Tips, you can create a dockerfile per container.
 
 When it's running the application should be like this :
 
-![flask] (./images/flask.PNG)
+![flask] (/images/flask.PNG)
