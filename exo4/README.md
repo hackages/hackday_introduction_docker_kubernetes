@@ -28,3 +28,11 @@ Add some workers to your node, to do that you'll need to ssh on the 2 others lin
 Check the status, and the health.
 
 Promote one worker to manager.
+
+### 4) Starting a service
+
+Try to create a multi-host overlay network to connect your service
+
+### 5) Deploy a stack 
+
+Try to deploy the previous stack you have created with docker-compose
