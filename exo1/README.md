@@ -32,9 +32,9 @@ In this exercice, try to contact an apache container or server by mapping port u
 
 ### 4) Passing environment variables
 
-Pull the image : docker pull josue549/hello-env and find a way to change the ENV variable when running. 
+Pull the image : docker pull docker.io/josue549/hello-env-ip and find a way to change the ENV variable called MYVAR when running. 
 
-Then log on the container and look after the env variable
+Then log on the container and look after the env variable 
 
 ### 5) Execute commands inside your container
 

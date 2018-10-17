@@ -5,7 +5,7 @@
 
 Based on the official docker wordpress image https://hub.docker.com/_/wordpress/, try to use docker compose to deploy it. 
 
-Hint, those environment variables will be needed : 
+Hint, those environment variables will be needed :
 
 ```
 MYSQL_ROOT_PASSWORD: somewordpress
@@ -20,24 +20,28 @@ WORDPRESS_DB_PASSWORD: wordpress
 
 ### 2) Building a nodejs application
 
-Based on the nodejs files, try to build an app using redis, mongodb and nginx as loadbalancer. 
+Based on the nodejs files, try to build an app using redis, mongodb and nginx as loadbalancer.
 
 The nginx configuration is already done.
 
-Please, try to follow the below schema : 
+Please, try to follow the below schema :
 
 Tips, you can create a dockerfile per container.
 
-While running the application should be like this : 
+While running the application should be like this :
+
+![node] (./images/node.PNG)
 
 ### 3) Building a python/flask application
 
-Based on the python files (especially app.py), try to build an app using redis, mongodb and nginx as loadbalancer. 
+Based on the python files (especially app.py), try to build an app using redis, mongodb and nginx as loadbalancer.
 
-The nginx configuration is already done. 
+The nginx configuration is already done.
 
-Please, try to follow the below schema : 
+Please, try to follow the below schema :
 
 Tips, you can create a dockerfile per container.
 
-When it's running the application should be like this : 
+When it's running the application should be like this :
+
+![flask] (./images/flask.PNG)

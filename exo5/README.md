@@ -40,12 +40,13 @@ and then you'll be able to install minikube itself.
 hyperV:
 https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperV-driver
 
-Minikube : 
+Minikube :
 https://github.com/kubernetes/minikube#windows
-kubectl : 
+kubectl :
 https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-2
 
 ### Dashboard
 
 Try to find a way to display the kubernetes dashbord, you should see something like this :
 
+![Kubernetes dashboard](https://d33wubrfki0l68.cloudfront.net/e6bda94ebf94cc460db5cdc42bbfdb8f95f5f7ce/fd28b/images/docs/ui-dashboard.png)
