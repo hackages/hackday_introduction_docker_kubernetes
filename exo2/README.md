@@ -2,7 +2,7 @@
 
 ### 1) Simple node application
 
-Based on the nodejs application you'll pull here : github hello ip 
+Based on the nodejs application you'll pull here : https://github.com/hackages/hackjam-kubernetes/tree/master/exercices/hello-ip
 
 Try to create a Dockerfile by following https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 

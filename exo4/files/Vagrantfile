@@ -18,7 +18,8 @@ Vagrant.configure("2") do |config|
     node0.vm.box = "williamyeh/centos7-docker"
     node0.vm.hostname = "node-0"
     
-    node0.vm.network "public_network",
+    node0.vm.network "private_network",
+      ip:"10.1.1.1",
       use_dhcp_assigned_default_route: true
     
     node0.vm.provision "shell", inline: $latestdocker
@@ -33,7 +34,8 @@ Vagrant.configure("2") do |config|
     node1.vm.box = "williamyeh/centos7-docker"
     node1.vm.hostname = "node-1"
 
-    node1.vm.network "public_network",
+    node1.vm.network "private_network",
+      ip:"10.1.1.2",
       use_dhcp_assigned_default_route: true
 
     node1.vm.provision "shell", inline: $latestdocker
@@ -48,7 +50,8 @@ Vagrant.configure("2") do |config|
     node2.vm.box = "williamyeh/centos7-docker"
     node2.vm.hostname = "node-2"
 
-    node2.vm.network "public_network",
+    node2.vm.network "private_network",
+      ip:"10.1.1.3",
       use_dhcp_assigned_default_route: true
 
     node2.vm.provision "shell", inline: $latestdocker
@@ -63,7 +66,8 @@ Vagrant.configure("2") do |config|
     node3.vm.box = "williamyeh/centos7-docker"
     node3.vm.hostname = "node-3"
 
-    node3.vm.network "public_network",
+    node3.vm.network "private_network",
+      ip:"10.1.1.4",
       use_dhcp_assigned_default_route: true
       
     node3.vm.provision "shell", inline: $latestdocker
