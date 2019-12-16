@@ -1,52 +1,39 @@
-# Kubernetes
-## Kubernetes exercice part 1.
+# Traefik - Netshare
 
-### Install minikube 
+Traefik is a reverse proxy and loadbalancer.
 
-#### macOS
+<https://docs.traefik.io/>
 
-As minikube will need to create a VM, you'll need to download Hyperkit or xHyve 
-and then you'll be able to install minikube itself.
+## Requierment
 
-Hyperkit driver:
-https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver
+To play with traefik, you'll need 3 machines running docker, if you have done the exo4, this should already be the case.
 
-xhyve driver : 
-https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver
+If not, there is a vagrantfile in the exo4 folder  or you can use <https://labs.play-with-docker.com/>.
 
-Minikube : 
-https://github.com/kubernetes/minikube#macos
-kubectl : 
-https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-0
+### 1) simple traefik example
 
-#### Linux
+For the exercice on traefik, you'll try to deploy one docker image accross your environment and access it via an url.
 
-As minikube will need to create a VM, you'll need to download KVM 
-and then you'll be able to install minikube itself.
+Since we don't have a DNS, you should use the hostfile to point on the manager or the command curl.
 
-KVM : 
-https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm-driver
+You can use this simple http image : nginxdemos/hello
 
-Minikube : 
-https://github.com/kubernetes/minikube#linux
-kubectl : 
-https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-1
+hint :
 
-#### Windows
+``` bash
+curl -H Host:website1.hackages.local http://192.168.0.1
+```
 
-As minikube will need to create a VM, you'll need to download hyperV
-and then you'll be able to install minikube itself.
+You can access the traefik dashboard on the port 8080.
 
-hyperV:
-https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperV-driver
+### 2) Bonus try to replace NGINX
 
-Minikube :
-https://github.com/kubernetes/minikube#windows
-kubectl :
-https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-2
+Now you should be able to deploy the app you made on the exo 4 but with some constraint.
 
-### Dashboard
+Let's say the node0 will be your loadbalancer, meaning everything should pass via 10.1.1.2
 
-Try to find a way to display the kubernetes dashbord, you should see something like this :
+Then node1 could only hosts the webapp , node2 mongodb and finally node3 will only be storing redis.
 
-![Kubernetes dashboard](https://d33wubrfki0l68.cloudfront.net/e6bda94ebf94cc460db5cdc42bbfdb8f95f5f7ce/fd28b/images/docs/ui-dashboard.png)
+Have a look at this document from Docker:
+
+<https://success.docker.com/article/using-contraints-and-labels-to-control-the-placement-of-containers>

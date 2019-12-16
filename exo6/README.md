@@ -1,18 +1,80 @@
 # Kubernetes
-## Kubernetes exercice part 2.
 
-For this set of exercices you'll need to pull this repo : https://github.com/hackages/hackjam-kubernetes
+## Kubernetes exercice part 1
 
-### Deploy a nodejs application
+There are two quick ways of running locally kubernetes, either by using MicroK8s for linux users or by installing Minikube.
 
-- Create a dockerfile based on the hello-ip server.js file
-- Try to deploy it using the kubectl command
-- Make it available from outside minikube
-- Scale it up, scale it down from the CLI or the dashboard
-- Follow the guideline of kubernetes doc to create a yaml file for the deployment
-- Create a new version by modifying server.js
-- Update the yaml file and use the rollout command to deploy the new app
+## Microk8s
 
-### gcp live visualizer
+Install snap first if you are not running Ubuntu 16.04 LTS or 18.04 LTS :
 
-- Try to deploy the gcp live visualizer tool using your prefered type of deployement
+<https://docs.snapcraft.io/installing-snapd/6735>
+
+If you are using Ubuntu 16.04 LTS or 18.04 LTS :
+
+``` bash
+sudo snap install microk8s --classic
+sudo microk8s.start
+```
+
+to check if it runs :
+
+``` bash
+microk8s.kubectl get all --all-namespaces
+```
+
+Then you are ready for the exercices !
+
+## Minikube installation
+
+### Windows
+
+As minikube will need to create a VM, you'll need to download hyperV
+and then you'll be able to install minikube itself.
+
+hyperV:
+<https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperV-driver>
+
+Minikube :
+<https://github.com/kubernetes/minikube#windows>
+kubectl :
+<https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-2>
+
+### macOS
+
+As minikube will need to create a VM, you'll need to download Hyperkit or xHyve
+and then you'll be able to install minikube itself.
+
+Hyperkit driver:
+<https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver>
+
+xhyve driver :
+<https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#xhyve-driver>
+
+Minikube :
+<https://github.com/kubernetes/minikube#macos>
+kubectl :
+<https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-0>
+
+### Linux
+
+As minikube will need to create a VM, you'll need to download KVM and then you'll be able to install minikube itself.
+
+KVM :
+<https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm-driver>
+
+Minikube :
+<https://github.com/kubernetes/minikube#linux>
+kubectl :
+<https://kubernetes.io/docs/tasks/tools/install-kubectl/#kubectl-install-curl-1>
+
+### Docker best practices
+
+This should help you! :
+<https://docs.docker.com/develop/develop-images/dockerfile_best-practices/>
+
+### Dashboard
+
+Try to find a way to display the kubernetes dashbord, you should see something like this :
+
+![Kubernetes dashboard](https://d33wubrfki0l68.cloudfront.net/e6bda94ebf94cc460db5cdc42bbfdb8f95f5f7ce/fd28b/images/docs/ui-dashboard.png)
